@@ -2,7 +2,7 @@
 # `python -m vantage.download && python -m vantage.ingest.build`). Without it the offline
 # seed catalog is served.
 # base pinned by digest (python:3.12-slim, 2026-10-02); Dependabot bumps it
-FROM python:3.12-slim@sha256:dddfd7e07f9d15aeeca61529320492139d21cac7f0070c00609243e51e4e0016
+FROM python:3.15-slim@sha256:65a65fc7b30b06cb6df4930fd4650697cb23f4c2698ab81fc87e4b031bc36928
 RUN useradd --create-home --uid 10001 vantage
 WORKDIR /app
 # Dependencies come from a hash-locked file (uv pip compile ... --generate-hashes; regenerate it when
